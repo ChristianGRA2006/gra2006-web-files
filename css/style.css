@@ -1,4 +1,11 @@
+/* DEBUG: see the boxes. Change 1px to 0 to hide them. */
+* {
+  outline: 0.5px solid red;
+}
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 /* ============================================
    Design direction
@@ -11,7 +18,16 @@
    ============================================ */
 
    /* --- Base and typography --- */
-body {
+
+* {
+  outline: 0px solid red;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+   body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 100%;
   line-height: 1.6;
@@ -36,10 +52,50 @@ a:hover { color: #123f68; }
   max-width: 800px;
 }
 
-/* --- Header and nav --- */
+.wrapper {
+  width: 800px;
+  padding: 40px;
+}
 
+.wrapper {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* --- Header and nav --- */
+.site-header{height: 170px;
+padding: 25px 0px 50px 0px;
+background-color: rgba(244, 151, 151, 0.5);
+
+
+
+}
 .nav-link { font-size: 1.5rem; 
-text-decoration: none}
+text-decoration: none
+border-radius: 6px;}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    padding: 8px 12px;
+}
+
+.nav-link:hover {
+  background-color: #e8eef5;
+}
+
+.nav-list li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.nav-list li a{
+  font-size: 20px;
+}
 
 /* --- Hero --- */
 .hero {
@@ -65,6 +121,12 @@ text-decoration: none}
   left: 5%;
 }
 
+.hero-title,
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.302);
+  padding: 8px 16px;
+}
+
 
 .hero-title{ color:rgb(254, 254, 254);
 font-size: 3rem;}
@@ -76,7 +138,7 @@ font-size: 2rem;}
   float: left;
   width: 40%;
   max-width: 100%;
-  margin-right: 1em;
+  margin: 0px 20px 20px 0px ;   /* top, right, bottom, left */
 }
 
 .image-inline-right {
@@ -87,9 +149,26 @@ font-size: 2rem;}
 }
 
 
-
 .text-block{display: flow-root;}
 
+.section-title {
+  margin: 0px 0px 20px 0px ;   /* top, left and right, bottom */
+}
+
+.text-block {
+  margin-bottom: 40px;
+}
+
+.text-block {
+  margin-bottom: 25px;
+  padding:0px;
+}
+
+.site-footer {
+  margin-top: 60px;
+  padding: 32px 0;
+  background-color: #eeeeee;
+}
 /* --- Lists --- */
 
 
