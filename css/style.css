@@ -132,20 +132,19 @@ border-radius: 6px;}
 font-size: 3rem;}
 .hero-text{ color:rgb(251, 251, 251);
 font-size: 2rem;}
+
 /* --- Text blocks --- */
 
 .image-inline-left {
-  float: left;
+   
   width: 40%;
-  max-width: 100%;
-  margin: 0px 20px 20px 0px ;   /* top, right, bottom, left */
+
 }
 
 .image-inline-right {
-  float: right;
+
   width: 40%;
-  max-width: 100%;
-  margin-left: 1em;
+ 
 }
 
 
@@ -169,10 +168,51 @@ font-size: 2rem;}
   padding: 32px 0;
   background-color: #eeeeee;
 }
-/* --- Lists --- */
 
 
-/* --- Links --- */
+/* --- flex --- */
+
+/* FLEX CONTAINER: image + text side by side */
+.flex-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+  background-color: rgb(255, 198, 198);
+  padding:20px
+  align-items: center;
+}
+.flex-media {
+  width: 40%;
+}
+.flex-text 
+{}
+
+  /* --- grid --- */
 
 
-/* --- Footer --- */
+/* GRID CONTAINER: image + text cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,2fr));
+  gap: 25px;
+ margin-bottom: 35px;
+
+
+   .card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+
+.card {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+.card-title {
+  margin: 10px;
+  color: red;
+}
