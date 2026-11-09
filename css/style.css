@@ -67,7 +67,7 @@ a:hover { color: #123f68; }
 /* --- Header and nav --- */
 .site-header{height: 170px;
 padding: 25px 0px 50px 0px;
-background-color: rgba(244, 151, 151, 0.5);
+background-color: rgba(245, 241, 241, 0.5);
 }
 
 .nav-link { font-size: 1.4rem;
@@ -207,11 +207,12 @@ font-size: 2rem;}
 
 
 /* GRID CONTAINER: image + text cards */
+
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,2fr));
-  gap: 25px;
- margin-bottom: 35px;
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5em;
+}
 
 
    .card-image {
@@ -232,3 +233,89 @@ font-size: 2rem;}
   margin: 10px;
   color: red;
 }
+
+/* HAMBURGER: hidden on wide screens */
+#nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #222222;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* HAMBURGER: the X when the menu is open */
+#nav-toggle:checked + .hamburger span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* MOBILE: 768px and narrower */
+@media (max-width: 768px) {
+
+  /* Logo left, hamburger right, and let the nav drop to its own line */
+  .site-header {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* Show the hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide the nav, and make it a full line when it opens */
+  .site-nav {
+    display: none;
+    flex-basis: 100%;
+  }
+
+  /* Show the nav when the checkbox is checked */
+  #nav-toggle:checked ~ .site-nav {
+    display: block;
+  }
+
+  /* Stack the links */
+  .nav-list {
+    flex-direction: column;
+    border:#1a5f9c
+  }
+
+  .flex-row {
+  flex-direction: column;
+}
+
+.flex-media {
+  width: 100%;
+}
+
+.site-nav  {background-color: #222222;
+
+  }.nav-link {border:#fa5f5f;
+  background-color: #222222;
+  color:#ffffff
+  }
+  
+  .hero-title{
+    font-size: 2rem;}
+
+  }
