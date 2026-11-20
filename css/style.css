@@ -1,6 +1,6 @@
 /* DEBUG: see the boxes. Change 1px to 0 to hide them. */
 * {
-  outline: 0.5px solid red;
+  outline: 0px solid red;
 }
 
 *, *::before, *::after {
@@ -42,8 +42,7 @@ h2   { font-size: 1.5rem; }
 h3   { font-size: 1.25rem; }
 h4   { font-size: 1rem; }
 
-a { color: #1a5f9c; }
-a:hover { color: #123f68; }
+
 
 /* --- Wrapper --- */
 .wrapper {
@@ -85,12 +84,12 @@ border-radius: 6px;}
     flex-wrap: wrap;
 }
 
-.nav-list li a{
-  font-size: 14px;
+{.nav-list li a
+  font-size: 10px;
 }
 
 .nav-link:hover {
-  background-color: #e8eef5;
+  background-color: #d62000;
 }
 
 /* HEADER LAYOUT: logo left, nav right */
@@ -269,6 +268,61 @@ font-size: 2rem;}
   transform: translateY(-9.5px) rotate(-45deg);
 }
 
+
+  /* FORM STYLES */
+form {
+  max-width: 500px;
+  margin: auto;
+  background-color:beige
+  padding: 20px
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 90%;
+  font-size: 14px;
+  border-radius: 100px;
+  height: 35px;
+}
+
+textarea{
+  border-radius: 8px;
+}
+
+input.phone {
+  width: 50%
+}
+
+textarea {
+  width: 90%;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  border-radius: 100px;
+  height: 30px;
+  color: white;
+  background-color:rgb(255, 8, 0)
+}
+
+
+button:hover {
+  display: block;
+  margin-top: 20px;
+  border-radius: 100px;
+  height: 30px;
+  background-color:#00b51bf0
+}
+
+input:user-invalid, textarea:user-invalid {
+  border:dashed 2px red;
+}
+
 /* MOBILE: 768px and narrower */
 @media (max-width: 768px) {
 
@@ -285,19 +339,19 @@ font-size: 2rem;}
 
   /* Hide the nav, and make it a full line when it opens */
   .site-nav {
-    display: none;
+     display: none;
     flex-basis: 100%;
   }
 
   /* Show the nav when the checkbox is checked */
   #nav-toggle:checked ~ .site-nav {
+      z-index: 99;
     display: block;
   }
 
   /* Stack the links */
   .nav-list {
     flex-direction: column;
-    border:#1a5f9c
   }
 
   .flex-row {
@@ -308,14 +362,18 @@ font-size: 2rem;}
   width: 100%;
 }
 
-.site-nav  {background-color: #222222;
-
-  }.nav-link {border:#fa5f5f;
-  background-color: #222222;
-  color:#ffffff
+.site-nav  
+{background-color: #000000;
+  .nav-link {border:#f11e1e;
+    color:#ffffff
   }
   
   .hero-title{
     font-size: 2rem;}
-
   }
+
+  /* FORM STYLES */
+form {
+  max-width: 500px;
+  margin: auto;
+}
