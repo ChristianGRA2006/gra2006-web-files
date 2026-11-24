@@ -31,6 +31,14 @@
   <p>
  This is the intro paragraph that sits under the page heading.Replace this text with two or three sentences of your own that say what the page is about. </p>
 
+<button class="pop-button" popovertarget="pop-benefits-info">More about this piece</button>
+
+<div id="pop-benefits-info" class="pop-info" popover>
+  <h3>About this piece</h3>
+  <p>Write a few sentences here.</p>
+  <button class="pop-close" popovertarget="pop-benefits-info" popovertargetaction="hide">Close</button>
+</div>
+
 </section>
 
 
@@ -39,28 +47,47 @@
 
 <section class="card-grid">
 
-  <div class="card">
+   <div class="card">
+    <button class="pop-thumb" popovertarget="rs7">
     <img class="card-image" src="images/rs7.png" alt="Hand-lettered menu for a coffee shop">
+    </button>
     <h3 class="card-title">Audi</h3>
     <p class="card-text">One or two sentences about what this is.</p>
+     <div id="rs7" class="pop-up" popover>
+    <img src="images/rs7.png" alt="Hand-lettered menu for a coffee shop">
+  </div>
   </div>
 
-   <div class="card">
+  <div class="card">
+     <button class="pop-thumb" popovertarget="mayback">
     <img class="card-image" src="images/mayback.png" alt="Hand-lettered menu for a coffee shop">
+    </button>
     <h3 class="card-title">Mercedes</h3>
     <p class="card-text">One or two sentences about what this is.</p>
+     <div id="mayback" class="pop-up" popover>
+    <img src="images/mayback.png" alt="Hand-lettered menu for a coffee shop">
+  </div>
   </div>
 
-   <div class="card">
+  <div class="card">
+     <button class="pop-thumb" popovertarget="gt3rs">
     <img class="card-image" src="images/gt3rs.png" alt="Hand-lettered menu for a coffee shop">
+    </button>
     <h3 class="card-title">Porsche</h3>
     <p class="card-text">One or two sentences about what this is.</p>
+     <div id="gt3rs" class="pop-up" popover>
+    <img src="images/gt3rs.png" alt="Hand-lettered menu for a coffee shop">
   </div>
-
+  </div>
    <div class="card">
+     <button class="pop-thumb" popovertarget="g82">
     <img class="card-image" src="images/g82.png" alt="Hand-lettered menu for a coffee shop">
+    </button>
     <h3 class="card-title">BMW</h3>
     <p class="card-text">One or two sentences about what this is.</p>
+     <div id="g82" class="pop-up" popover>
+    <img src="images/g82.png" alt="Hand-lettered menu for a coffee shop">
+  </div>
   </div>
 
 </section>
